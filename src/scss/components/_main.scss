@@ -1,0 +1,567 @@
+.pain-treatment {
+    grid-template-columns: repeat(12,1fr);
+    display: grid;
+    grid-gap: 10px;
+
+&__foto__img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: 52px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+&__info {
+    grid-column-start: 3;
+    grid-column-end: 17;
+
+    &__title {
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 44px;
+        letter-spacing: 1px;
+        color: #3A4959;
+        padding-top: 170px;
+    }
+
+    &__text {
+        font-family: 'Open Sans';
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 29px;
+        color: #3A4959;
+        padding-top: 16px;
+        margin-bottom: 47px;
+    }
+    &__button {
+        background: #FFCE51;
+        width: 160px;
+        padding: 10px 62px 13px 62px;
+        font-family: 'Open Sans';
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: center;
+        color:black;
+        border-radius: 10px;
+    }
+}
+}
+
+.pain-treatment__info__title::before {
+    content: " ";
+    position: absolute;
+    width: 110px;
+    height: 5px;
+    background: #056CDE;
+    border-radius: 10px;
+    height: 6px;
+    top: 960px;
+}
+
+.services__title::before {
+    content: " ";
+    position: absolute;
+    width: 110px;
+    height: 5px;
+    background: #056CDE;
+    border-radius: 10px;
+    height: 6px;
+    top: 1598px;
+}
+
+.services {
+    grid-template-columns: repeat(12,1fr);
+    display: grid;
+    grid-gap: 20px;
+
+&__title {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    margin-top: 149px;
+    z-index: 1;
+}
+
+&__card-chiropractic {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    max-width: 450px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: 19px;
+    margin-bottom: 570px;
+    z-index: 1;
+}
+
+&__card-acupuncture {
+    grid-column-start: 7;
+    grid-column-end: 12;
+    margin-top: 173px;
+    max-width: 450px;
+    max-height: 470px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+&__card-massage {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    max-width: 450px;
+    max-height: 470px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: -518px;
+}
+}
+
+.card-chiropractic {
+&__img {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+&__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: #3A4959;
+    padding: 31px 38px 8px 38px;
+}
+
+&__text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3A4959;
+    padding: 0px 38px 21px 38px;
+}
+
+&__links {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 23px;
+    padding: 0px 38px 38px 38px; 
+}
+}
+
+.card-acupuncture {
+
+&__img {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+&__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: #3A4959;
+    padding: 30px 38px 8px 38px;
+    }
+
+&__text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3A4959;
+    padding: 0px 38px 21px 38px;
+    }
+
+&__links {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0px 40px 0px 40px; 
+    }
+}
+
+.card-massage {
+
+&__img {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+&__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: #3A4959;
+    padding: 30px 38px 8px 38px;
+    }
+    
+&__text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3A4959;
+    padding: 0px 38px 21px 38px;
+    }
+    
+&__links {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 24px;
+    padding: 0px 40px; 
+    }
+}
+
+.links {
+&__chiropractic {
+    margin-right: 18px;
+    color: #056CDE;
+}
+
+&__distraction {
+    color: #056CDE;
+}
+
+&__thompson {
+    padding: 20px 21px 0px 0px;
+    color: #056CDE;
+}
+
+&__all {
+    color: #056CDE;
+}
+
+&__cupping {
+    color: #056CDE;
+    margin-right: 18px;
+}
+
+&__chinese-herbs {
+    color: #056CDE;
+}
+
+&__tissue {
+    margin-right: 17px;
+    color: #056CDE;
+}
+
+&__trigger {
+    margin-right: 17px;
+    color: #056CDE;
+}
+
+&__massage {
+    color: #056CDE;
+}
+
+&__myofascial {
+    color: #056CDE;
+}
+}
+
+.advantages__info__title::before {
+    content: " ";
+    position: absolute;
+    width: 110px;
+    height: 5px;
+    background: #056CDE;
+    border-radius: 10px;
+    height: 6px;
+    top: 2808px;
+}
+
+.advantages {
+&__info {
+    margin-top: 88px;
+    padding-left: 100px;
+    &__text {
+        padding-top: 17px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 29px;
+        color: #3A4959;
+    }
+}
+
+&__cards-first {
+    grid-template-columns: repeat(26,1fr);
+    display: grid;
+    grid-gap: 0px;
+    margin-top: 43px;
+}
+
+&__cards-first__multi {
+    grid-column-start: 4;
+    grid-column-end: 13;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
+    border-radius: 10px;
+}
+
+&__cards-first__doctor {
+    grid-column-start: 15;
+    grid-column-end: 24;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
+    border-radius: 10px;
+}
+
+&__cards-second {
+    grid-template-columns: repeat(26,1fr);
+    display: grid;
+    grid-gap: 0px;
+    margin-top: 48px;
+}
+
+&__cards-second__over {
+    grid-column-start: 4;
+    grid-column-end: 13;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
+    border-radius: 10px;
+}
+
+&__cards-second__insurance {
+    grid-column-start: 15;
+    grid-column-end: 24;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
+    border-radius: 10px;
+}
+}
+
+.multi {
+&__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3A4959;
+    padding-left: 63px;
+    margin-top: -40px;
+}
+
+&__text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3A4959;
+    padding: 9px 0px 0px 63px;
+}
+}
+
+.doctor {
+&__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3A4959;
+    padding-left: 64px;
+    margin-top: -38px;
+}
+    
+&__text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3A4959;
+    padding: 7px 0px 14px 64px;
+}
+}
+
+.sprite { 
+    @mixin sprite($item) {
+      height: 70px;
+      width: 70px;
+      background-position: ($item * (-73)) + px 860px;
+      background-image: url('./img/Sprite_b.svg');
+    }
+      
+    &__multi {
+      @include sprite(0);
+      position: relative;
+      top: 40px;
+      left: -38px;
+    }
+  
+    &__doctor {
+        @include sprite(1);
+        position: relative;
+        top: 41px;
+        left: -35px;
+      }
+  
+    &__over {
+        @include sprite(2);
+        position: relative;
+        top: 41px;
+        left: -35px;
+    }
+  
+    &__insurance {
+        @include sprite(3);
+        position: relative;
+        top: 41px;
+        left: -35px;
+      }
+    }
+
+.over {
+        &__title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            color: #3A4959;
+            padding-left: 63px;
+            margin-top: -37px;
+        }
+        
+        &__text {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: #3A4959;
+            padding: 9px 0px 34px 63px;
+        }
+}
+
+.insurance {
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #3A4959;
+        padding-left: 63px;
+        margin-top: -37px;
+    }
+    
+    &__text {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #3A4959;
+        padding: 9px 0px 34px 63px;
+    }
+    }
+
+    .osvaldo {
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-gap: 20px;
+
+    &__foto {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        
+        &__bg {
+            margin-top: 144px;
+            border-radius: 10px;
+        }
+
+        &__img {
+            position: relative;
+            top: -367px;
+            left: 10px;
+        }
+    }
+
+    &__info {
+        grid-column-start: 7;
+        grid-column-end: 13;
+
+        &__title {
+            margin-top: 180px;
+            margin-bottom: 18px;
+        }
+
+        &__text {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 29px;
+            color: #3A4959;
+        }
+    }
+    }
+
+    
+.osvaldo__info__title::before {
+    content: " ";
+    position: absolute;
+    width: 110px;
+    height: 5px;
+    background: #056CDE;
+    border-radius: 10px;
+    height: 6px;
+    top: 3490px;
+}
+
+.main__content {
+
+&__line-first {
+    margin-top: -1225px;
+}
+
+&__advantages {
+    margin-top: -1257px;
+}
+
+&__bg {
+    z-index: 0;
+    position: absolute;
+    background: url('./img/bg2.svg');
+    height: 1225px;
+    width: 590px;
+    top: 1220px;
+    left: 0px;
+}
+
+&__bg2 {
+    background: url('./img/bg3.svg');
+    height: 1259px;
+    width: 590px;
+    z-index: 0;
+    position: absolute;
+    top: 2100px;
+    right: 0px;
+}
+}

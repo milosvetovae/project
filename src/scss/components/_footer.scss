@@ -1,0 +1,156 @@
+.footer__first {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 85px;
+
+&__pages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 305px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #3A4959;
+}
+
+&__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+}
+
+.contacts {
+
+&__sn { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    padding-right: 30px;
+
+    @mixin sprite($item) {
+        height: 30px;
+        width: 30px;
+        background-position: ($item * (-30)) + px 460px;
+        background-image: url('./img/Sprite_b.svg');
+      }
+        
+    &__pinterest {
+        @include sprite(0);
+      }
+    &__instagram {
+        @include sprite(1);
+      }
+    &__twitter {
+        @include sprite(2);
+      }
+    &__facebook {
+        @include sprite(3);
+    }
+    }
+&__button {
+    background: #FFCE51;
+    width: 160px;
+    padding: 12px 24px 9px 26px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color:black;
+    border-radius: 10px;
+}
+}
+
+.footer__second {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 23px;
+    color: #3A4959;
+    padding-top: 35px;
+    margin-bottom: 50px;
+
+&__adress {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+&__time {
+    grid-column-start: 4;
+    grid-column-end: 8;
+}
+
+&__info {
+    grid-column-start: 9;
+    grid-column-end: 13;
+    text-align: right;
+}
+}
+
+.adress {
+
+&__number {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 23px;
+    color: #3A4959;
+}
+
+&__street {
+    line-height: 27px;
+}
+}
+
+.time {
+
+&__f {
+padding-top: 5px;
+}
+
+&__s {
+    padding-top: 5px;;
+}
+}
+
+.info {
+
+&__copyright {
+    padding-top: 10px;
+}
+
+&__web {
+    padding-top: 10px;
+}
+
+&__rating {
+    display: flex;
+    justify-content: flex-end;
+    @mixin sprite($item) {
+    height: 22px;
+    width: 22px;
+    background-position: ($item * (-30)) + px 460px;
+    background-image: url('./img/Sprite_b.svg');
+    }
+
+    &__star {
+    @include sprite(4);
+    margin-left: 3px;
+    }
+
+    &__text {
+        padding-right: 6px;
+    }
+}
+}

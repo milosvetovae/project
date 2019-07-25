@@ -1,0 +1,99 @@
+.header {
+
+&__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+&__menu {
+  display: flex;
+  padding-top: 36px;
+}
+
+&__contact-us {
+  padding-top: 31px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: 0px) and (max-width: 1023px) {
+    display: none;
+  }
+  }
+&__logo {
+  padding-right: 78px;
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding-left: 35px;
+    margin-top: -15px;
+    max-width: 160px;
+  }
+  @media (min-width: 0px) and (max-width: 767px) {
+    padding-left: 20px;
+    margin-top: -35px;
+    max-width: 132px;
+  }
+  }
+}
+
+.menu {
+padding: 22px 0px 20px 0px;
+white-space: nowrap;
+@media (min-width: 0px) and (max-width: 1023px) {
+  display: none;
+}
+
+&__link {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: #3a4959;
+  padding-right: 27px;
+}
+}
+
+.contact-us {
+  
+&__appointment {
+  background-color: #FFCE51;
+  border-radius: 10px;
+  padding: 12px 21px 11px 22px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #3a4959;
+  text-align: center;
+  }
+
+&__number {
+  font-family: Open Sans;
+  font-style: normal;
+  padding-right: 30px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  font-weight: 700;
+  color: #3a4959;
+  text-align: center;
+  white-space: nowrap;
+}
+}
+
+.icon {
+  display: none;
+@media (min-width: 768px) and (max-width: 1023px) {
+  display: block;
+  position: absolute;
+  top: 45px;
+  right: 30px;
+  }
+@media (min-width: 0px) and (max-width: 767px) {
+  display: block;
+  position: absolute;
+  top: 26px;
+  right: 20px;
+  }
+}

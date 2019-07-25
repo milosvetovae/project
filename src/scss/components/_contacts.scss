@@ -1,0 +1,83 @@
+.contacts {
+
+&__content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+  background:  #FFCE51;
+  border-radius: 10px;
+  margin-top: -200px;
+
+  &__sprite {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  &__info {
+    grid-column-start: 4;
+    grid-column-end: 10;
+  }
+}
+}
+
+.info {
+
+&__title {
+  padding-top: 62px;
+  padding-bottom: 18px;
+}
+
+&__text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 29px;
+  color: #3A4959;
+}
+
+&__number {
+  padding-top: 22px;
+  padding-bottom: 31px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 1px;
+  color: #3A4959;
+}
+
+&__button {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  background: #056CDE;
+  border-radius: 10px;
+  width: 200px;
+  padding: 15px 54px 15px 57px;
+  margin-bottom: 70px;
+}
+}
+
+.sprite { 
+  @mixin sprite($item) {
+    height: 105px;
+    width: 205px;
+    background-position: ($item * (-73)) + px 790px;
+    background-image: url('./img/Sprite_b.svg');
+  }
+    
+  &__mail {
+    @include sprite(0);
+    position: relative;
+    top: -30px;
+    left: 35px;
+  }
+}
