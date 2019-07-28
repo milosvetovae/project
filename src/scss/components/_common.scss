@@ -2,18 +2,15 @@ body {
   margin: 0px;
   width: 100%;
   background: rgb(230, 247, 247);
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 1180px;
   padding: 0px 110px;
   margin: 0px auto;
-  
-@media (min-width: 0px) and (max-width: 1023px) {
-  max-width: 1180px;
-  padding: 0px;
-  margin: 0px auto;
-  }
+  @media (min-width: 768px) and (max-width: 1023px) {padding: 0px 35px; margin: 0px auto;}
+  @media (min-width: 0px) and (max-width: 767px) {padding: 0px 20px; margin: 0px auto;}
 }
 
 h1, h2, h3, p {
@@ -43,13 +40,13 @@ a {
   text-decoration: none;
   cursor: pointer;
 
-&:hover {
-  opacity: 0.5;
-}
+  &:hover {
+    opacity: 0.5;
+  }
 
-&:active {
-  opacity: 0.8;
-}
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 img {
@@ -59,4 +56,107 @@ img {
 
 svg {
   max-width: 100%;
+}
+
+@mixin sans13() {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;  
+  color: #3a4959;
+} 
+
+@mixin sans16bold() {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3a4959;
+}
+
+@mixin sans13bold() {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  color: #3a4959;
+}
+
+@mixin mont38bold() {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 44px;
+  letter-spacing: 1px;
+  color: #3A4959;
+}
+
+@mixin mont22bold() {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+@mixin sans18() {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 29px;
+  color: #3A4959;
+}
+
+@mixin sans15() {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+@mixin mont24bold() {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  color: #3A4959;
+}
+
+@mixin mont18bold() {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+@mixin sans16() {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3A4959;
+}
+
+@mixin sans14() {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@mixin sans11() {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 23px;
 }

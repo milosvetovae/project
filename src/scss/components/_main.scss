@@ -1,53 +1,56 @@
 .pain-treatment {
     grid-template-columns: repeat(12,1fr);
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
+    padding-top: 130px;
+    @media (min-width: 768px) and (max-width: 1023px) {margin-top: -205px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: none;}
 
-&__foto__img {
+&__foto {
     grid-column-start: 1;
-    grid-column-end: 2;
-    margin-top: 52px;
-    border-radius: 10px;
-    position: relative;
-    z-index: 1;
-}
+    grid-column-end: 7;
+    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 1; grid-column-end: 7;}
+    
+    &__img {
+        box-shadow: 0 0 10px rgba(145, 144, 144, 0.5);
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;    
+        }
+    }
 
 &__info {
-    grid-column-start: 3;
-    grid-column-end: 17;
-
+    grid-column-start: 7;
+    grid-column-end: 13;
+    
     &__title {
-        font-family: 'Montserrat';
-        font-weight: bold;
-        font-size: 38px;
-        line-height: 44px;
-        letter-spacing: 1px;
-        color: #3A4959;
-        padding-top: 170px;
-    }
+        position: relative;
+        @include mont38bold();
+        padding-top: 115px;
+        @media (min-width: 768px) and (max-width: 1023px) {@include mont22bold(); padding-top: 65px;}
+        }
 
     &__text {
-        font-family: 'Open Sans';
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 29px;
-        color: #3A4959;
+        @include sans18 ();
         padding-top: 16px;
-        margin-bottom: 47px;
-    }
+        padding-bottom: 47px;
+        position: relative;
+        z-index: 1;
+        @media (min-width: 768px) and (max-width: 1023px) {@include sans15(); padding-bottom: 27px;}
+        }
+
     &__button {
         background: #FFCE51;
         width: 160px;
         padding: 10px 62px 13px 62px;
-        font-family: 'Open Sans';
-        font-weight: bold;
-        font-size: 13px;
-        line-height: 18px;
+        @include sans13bold();
         text-align: center;
         color:black;
         border-radius: 10px;
+        position: relative;
+        z-index: 1;
+        }
     }
-}
 }
 
 .pain-treatment__info__title::before {
@@ -57,8 +60,8 @@
     height: 5px;
     background: #056CDE;
     border-radius: 10px;
-    height: 6px;
-    top: 960px;
+    top: 77px;
+    @media (min-width: 768px) and (max-width: 1023px) {width: 80px; height: 3px; top: 40px;}
 }
 
 .services__title::before {
@@ -68,21 +71,27 @@
     height: 5px;
     background: #056CDE;
     border-radius: 10px;
-    height: 6px;
-    top: 1598px;
+    top: 112px;
+    @media (min-width: 768px) and (max-width: 1023px) {width: 80px; height: 3px; top: 80px;}
+    @media (min-width: 0px) and (max-width: 767px) {width: 80px; height: 3px; top: 40px;}
 }
 
 .services {
     grid-template-columns: repeat(12,1fr);
     display: grid;
     grid-gap: 20px;
-
+    padding-top: 150px;
+    position: relative;
+    @media (min-width: 768px) and (max-width: 1023px) {padding-top: 105px;}
+    @media (min-width: 0px) and (max-width: 767px) {grid-template-columns: repeat(4, 1fr); grid-row-gap: 20px; padding-top: 208px;}
+    
 &__title {
     grid-column-start: 2;
     grid-column-end: 7;
-    margin-top: 149px;
     z-index: 1;
-}
+    @media (min-width: 768px) and (max-width: 1023px) {@include mont22bold();}
+    @media (min-width:0px) and (max-width: 767px) {@include mont22bold(); margin-top: -150px; grid-column-start: 1; grid-column-end: 5;}
+    }
 
 &__card-chiropractic {
     grid-column-start: 2;
@@ -91,9 +100,12 @@
     border-radius: 10px;
     background-color: #fff;
     margin-top: 19px;
-    margin-bottom: 570px;
+    max-height: 470px;
     z-index: 1;
-}
+    box-shadow: 0 0 10px rgba(145, 144, 144, 0.5);
+    @media (min-width: 768px) and (max-width: 1023px) {margin-top: 9px; max-height: 400px;}
+    @media (min-width: 0px) and (max-width: 767px) {grid-column-start: 1; grid-column-end: 5; margin-top: -115px;}
+    }
 
 &__card-acupuncture {
     grid-column-start: 7;
@@ -103,7 +115,11 @@
     max-height: 470px;
     border-radius: 10px;
     background-color: #fff;
-}
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(145, 144, 144, 0.5);
+    @media (min-width: 768px) and (max-width: 1023px) {margin-top: 170px; max-height: 400px;}
+    @media (min-width: 0px) and (max-width: 767px) {grid-column-start: 1; grid-column-end: 5; margin-top: 0px;}
+    }
 
 &__card-massage {
     grid-column-start: 2;
@@ -112,8 +128,12 @@
     max-height: 470px;
     border-radius: 10px;
     background-color: #fff;
-    margin-top: -518px;
-}
+    margin-top: -250px;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(145, 144, 144, 0.5);
+    @media (min-width: 768px) and (max-width: 1023px) {margin-top: -170px; max-height: 400px;}
+    @media (min-width: 0px) and (max-width: 767px) {grid-column-start: 1; grid-column-end: 5; margin-top: -180px;}
+    }
 }
 
 .card-chiropractic {
@@ -122,114 +142,88 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-}
+    }
 
 &__title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 1px;
-    color: #3A4959;
+    @include mont24bold();
     padding: 31px 38px 8px 38px;
-}
+    @media (min-width: 768px) and (max-width: 1023px) {@include mont18bold(); padding: 20px 0px 8px 18px;}
+    @media (min-width: 0px) and (max-width: 767px) {@include mont18bold(); padding: 20px 0px 8px 18px; color: #056CDE;}
+    }
 
 &__text {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #3A4959;
-    padding: 0px 38px 21px 38px;
-}
+    @include sans16();
+    padding: 0px 48px 21px 38px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 0px 30px 21px 18px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: none;}
+    }
 
 &__links {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 23px;
-    padding: 0px 38px 38px 38px; 
-}
+    @include sans13();
+    padding: 0px 38px 38px 38px;
+    word-wrap: normal; 
+    @media (min-width: 768px) and (max-width: 1023px) {@include sans11(); padding: 0px 50px 0px 18px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: none;}
+    }
 }
 
 .card-acupuncture {
-
 &__img {
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
+
 &__title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 1px;
-    color: #3A4959;
+    @include mont24bold();
     padding: 30px 38px 8px 38px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include mont18bold(); padding: 18px 38px 8px 20px;}
+    @media (min-width: 0px) and (max-width: 767px) {@include mont18bold(); padding: 20px 0px 8px 18px; color: #056CDE;}
     }
 
 &__text {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #3A4959;
-    padding: 0px 38px 21px 38px;
+    @include sans16();
+    padding: 0px 68px 21px 38px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 0px 15px 15px 20px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: none;}
     }
 
 &__links {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 18px;
-    padding: 0px 40px 0px 40px; 
+    @include sans13();
+    padding: 0px 40px 67px 40px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include sans11(); padding: 0px 15px 25px 20px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: none;} 
     }
 }
 
 .card-massage {
-
 &__img {
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-}
+    }
+
 &__title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 1px;
-    color: #3A4959;
+    @include mont24bold();
     padding: 30px 38px 8px 38px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include mont18bold(); padding: 20px 0px 8px 18px;}
+    @media (min-width: 0px) and (max-width: 767px) {@include mont18bold(); padding: 20px 0px 8px 18px; color: #056CDE;}
     }
     
 &__text {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #3A4959;
+    @include sans16();
     padding: 0px 38px 21px 38px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 0px 15px 15px 20px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: none;}
     }
     
 &__links {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 24px;
-    padding: 0px 40px; 
+    @include sans13();
+    padding: 0px 40px 35px 40px; 
+    @media (min-width: 768px) and (max-width: 1023px) {@include sans11(); padding: 0px 15px 25px 20px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: none;}
     }
 }
 
@@ -237,29 +231,29 @@
 &__chiropractic {
     margin-right: 18px;
     color: #056CDE;
-}
+    }
 
 &__distraction {
     color: #056CDE;
-}
+    }
 
 &__thompson {
     padding: 20px 21px 0px 0px;
     color: #056CDE;
-}
+    }
 
 &__all {
     color: #056CDE;
-}
+    }
 
 &__cupping {
     color: #056CDE;
     margin-right: 18px;
-}
+    }
 
 &__chinese-herbs {
     color: #056CDE;
-}
+    }
 
 &__tissue {
     margin-right: 17px;
@@ -269,15 +263,15 @@
 &__trigger {
     margin-right: 17px;
     color: #056CDE;
-}
+    }
 
 &__massage {
     color: #056CDE;
-}
+    }
 
 &__myofascial {
     color: #056CDE;
-}
+    }
 }
 
 .advantages__info__title::before {
@@ -537,10 +531,6 @@
 
 .main__content {
 
-&__line-first {
-    margin-top: -1225px;
-}
-
 &__advantages {
     margin-top: -1257px;
 }
@@ -551,8 +541,15 @@
     background: url('./img/bg2.svg');
     height: 1225px;
     width: 590px;
-    top: 1220px;
+    top: 720px;
     left: 0px;
+    @media (min-width: 768px) and (max-width: 1023px) {
+        top: 500px;
+        left: -80px;
+    }
+    @media (min-width: 0px) and (max-width: 767px) {
+        display: none;
+    }
 }
 
 &__bg2 {
@@ -563,5 +560,12 @@
     position: absolute;
     top: 2100px;
     right: 0px;
+    @media (min-width: 768px) and (max-width: 1023px) {
+        top: 1460px;
+        max-width: 330px;
+    }
+    @media (min-width: 0px) and (max-width: 767px) {
+        display: none;
+    }
 }
 }
