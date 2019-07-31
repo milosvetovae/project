@@ -10,7 +10,7 @@
   &__description {
     grid-column-start: 2;
     grid-column-end: 7;
-    @media (min-width: 0px) and (max-width: 767px) {grid-column-start: 1; grid-column-end: 5;}
+    @media (min-width:0px) and (max-width: 767px) {grid-column-start: 1; grid-column-end: 5;}
   }
 
   &__img {
@@ -55,7 +55,7 @@
   position: relative;
   z-index: 1;
   @media (min-width: 768px) and (max-width: 1023px) {padding: 15px 0px 19px 0px;}
-  @media (min-width:0px) and (max-width: 767px) {width: 100%;}
+  @media (min-width:0px) and (max-width: 767px) {width: 100%; padding: 15px 0px 19px 0px;}
   }
 
 &__button__push {
@@ -67,7 +67,7 @@
   background: #056CDE;
   border-radius: 10px;
   @media (min-width: 768px) and (max-width: 1023px) {font-size: 13px; line-height: 18px; padding: 14px 56px 10px 56px;}
-  @media (min-width: 0px) and (max-width: 767px) {font-size: 13px; line-height: 18px; width: 100%; grid-column-start: 1; grid-column-end: 5;}
+  @media (min-width: 0px) and (max-width: 767px) {font-size: 13px; line-height: 18px; padding: 14px 0px 9px 0px;}
   }
 
 &__contact {

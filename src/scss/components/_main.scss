@@ -142,6 +142,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    @media (min-width: 0px) and (max-width: 767px) {max-height: 95px;}
     }
 
 &__title {
@@ -173,7 +174,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-}
+    @media (min-width: 0px) and (max-width: 767px) {max-height: 95px;}
+    }
 
 &__title {
     @include mont24bold();
@@ -203,6 +205,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    @media (min-width: 0px) and (max-width: 767px) {max-height: 95px;}
     }
 
 &__title {
@@ -238,7 +241,7 @@
     }
 
 &__thompson {
-    padding: 20px 21px 0px 0px;
+    padding-right: 21px;
     color: #056CDE;
     }
 
@@ -282,30 +285,42 @@
     background: #056CDE;
     border-radius: 10px;
     height: 6px;
-    top: 2808px;
+    top: 50px;
+    @media (min-width: 768px) and (max-width: 1023px) {width: 80px; height: 3px; top: 12px;}
+    @media (min-width: 0px) and (max-width: 767px) {width: 80px; height: 3px; top: -20px;}
 }
 
 .advantages {
+    position: relative;
+    z-index: 1;
+
 &__info {
-    margin-top: 88px;
+    padding-top: 88px;
     padding-left: 100px;
-    &__text {
-        padding-top: 17px;
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 29px;
-        color: #3A4959;
+    @media (min-width: 768px) and (max-width: 1023px) {padding-top: 35px; padding-left: 55px;}
+    @media (min-width: 0px) and (max-width: 767px) {padding-top: 0px; padding-left: 0px;}
+
+    &__title {
+        @media (min-width: 0px) and (max-width: 1023px) {@include mont22bold();}
     }
-}
+    &__text {
+        padding-top: 16px;
+        padding-right: 500px;
+        @include sans18();
+        @media (min-width: 768px) and (max-width: 1023px) {@include sans15(); padding-right: 200px;}
+        @media (min-width: 0px) and (max-width: 767px) {display: none; padding-right: 0px;}
+        }
+    }
 
 &__cards-first {
     grid-template-columns: repeat(26,1fr);
     display: grid;
     grid-gap: 0px;
-    margin-top: 43px;
-}
+    padding-top: 43px;
+    height: auto;
+    @media (min-width: 768px) and (max-width: 1023px) {grid-gap: 10px; padding-top: 63px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: block; padding-top: 0px;}
+    }
 
 &__cards-first__multi {
     grid-column-start: 4;
@@ -313,7 +328,10 @@
     background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
     border-radius: 10px;
-}
+    width: 100%;
+    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 3;}
+    @media (min-width: 0px) and (max-width: 767px) {background: none;}
+    }
 
 &__cards-first__doctor {
     grid-column-start: 15;
@@ -321,14 +339,20 @@
     background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
     border-radius: 10px;
-}
+    width: 100%;
+    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 14;}
+    @media (min-width: 0px) and (max-width: 767px) {background: none;}
+    }
 
 &__cards-second {
     grid-template-columns: repeat(26,1fr);
     display: grid;
     grid-gap: 0px;
     margin-top: 48px;
-}
+    height: auto;
+    @media (min-width: 768px) and (max-width: 1023px) {grid-gap: 10px; margin-top: 58px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: block; margin-top: 0px;}
+    }
 
 &__cards-second__over {
     grid-column-start: 4;
@@ -336,7 +360,10 @@
     background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
     border-radius: 10px;
-}
+    width: 100%;
+    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 3;}
+    @media (min-width: 0px) and (max-width: 767px) {background: none;}
+    }
 
 &__cards-second__insurance {
     grid-column-start: 15;
@@ -344,7 +371,10 @@
     background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
     border-radius: 10px;
-}
+    width: 100%;
+    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 14;}
+    @media (min-width: 0px) and (max-width: 767px) {background: none;}
+    }
 }
 
 .multi {
@@ -357,6 +387,8 @@
     color: #3A4959;
     padding-left: 63px;
     margin-top: -40px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 27px 30px 0px 25px;}
+    @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px; margin-top: -22px;}
 }
 
 &__text {
@@ -366,7 +398,9 @@
     font-size: 16px;
     line-height: 24px;
     color: #3A4959;
-    padding: 9px 0px 0px 63px;
+    padding: 9px 90px 10px 63px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 5px 30px 26px 25px;}
+    @media (min-width: 0px) and (max-width: 767px) {@include sans14(); padding: 0px 0px 26px 70px;}
 }
 }
 
@@ -380,6 +414,8 @@
     color: #3A4959;
     padding-left: 64px;
     margin-top: -38px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 26px 30px 0px 25px;}
+    @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px; margin-top: -45px;}
 }
     
 &__text {
@@ -389,7 +425,9 @@
     font-size: 16px;
     line-height: 24px;
     color: #3A4959;
-    padding: 7px 0px 14px 64px;
+    padding: 7px 30px 10px 64px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 3px 10px 26px 25px;}
+    @media (min-width: 0px) and (max-width: 767px) {@include sans14(); padding: 0px 0px 26px 70px;}
 }
 }
 
@@ -399,6 +437,7 @@
       width: 70px;
       background-position: ($item * (-73)) + px 860px;
       background-image: url('./img/Sprite_b.svg');
+      @media (min-width: 0px) and (max-width: 1023px) {height: 50px; width: 50px; background-position: ($item * (-53)) + px 682px;}
     }
       
     &__multi {
@@ -406,6 +445,9 @@
       position: relative;
       top: 40px;
       left: -38px;
+      @media (min-width: 768px) and (max-width: 1023px) {top: -28px; left: 23px;}
+      @media (min-width: 0px) and (max-width: 767px) {top: 28px; left: 0px;}
+    
     }
   
     &__doctor {
@@ -413,6 +455,8 @@
         position: relative;
         top: 41px;
         left: -35px;
+        @media (min-width: 768px) and (max-width: 1023px) {top: -28px; left: 25px;}
+        @media (min-width: 0px) and (max-width: 767px) {top: 28px; left: 0px;}
       }
   
     &__over {
@@ -420,6 +464,8 @@
         position: relative;
         top: 41px;
         left: -35px;
+        @media (min-width: 768px) and (max-width: 1023px) {top: -28px; left: 25px;}
+        @media (min-width: 0px) and (max-width: 767px) {top: 28px; left: 0px;}
     }
   
     &__insurance {
@@ -427,6 +473,8 @@
         position: relative;
         top: 41px;
         left: -35px;
+        @media (min-width: 768px) and (max-width: 1023px) {top: -28px; left: 27px;}
+        @media (min-width: 0px) and (max-width: 767px) {top: 28px; left: 0px;}
       }
     }
 
@@ -440,6 +488,8 @@
             color: #3A4959;
             padding-left: 63px;
             margin-top: -37px;
+            @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 24px 30px 0px 25px;}
+            @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px;}
         }
         
         &__text {
@@ -449,7 +499,9 @@
             font-size: 16px;
             line-height: 24px;
             color: #3A4959;
-            padding: 9px 0px 34px 63px;
+            padding: 9px 50px 34px 63px;
+            @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 3px 10px 50px 25px;}
+            @media (min-width: 0px) and (max-width: 767px) {@include sans14(); padding: 0px 0px 26px 70px;}
         }
 }
 
@@ -463,6 +515,8 @@
         color: #3A4959;
         padding-left: 63px;
         margin-top: -37px;
+        @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 20px 30px 0px 25px;}
+        @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px;}
     }
     
     &__text {
@@ -472,28 +526,25 @@
         font-size: 16px;
         line-height: 24px;
         color: #3A4959;
-        padding: 9px 0px 34px 63px;
+        padding: 9px 70px 34px 63px;
+        @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 3px 10px 50px 25px;}
+        @media (min-width: 0px) and (max-width: 767px) {@include sans14(); padding: 0px 0px 26px 70px;}
     }
     }
 
     .osvaldo {
+        position: relative;
         display: grid;
         grid-template-columns: repeat(12,1fr);
         grid-gap: 20px;
 
     &__foto {
         grid-column-start: 1;
-        grid-column-end: 5;
-        
-        &__bg {
-            margin-top: 144px;
-            border-radius: 10px;
-        }
+        grid-column-end: 7;
 
         &__img {
             position: relative;
-            top: -367px;
-            left: 10px;
+            top: 120px;
         }
     }
 
@@ -504,6 +555,7 @@
         &__title {
             margin-top: 180px;
             margin-bottom: 18px;
+            @media (min-width: 768px) and (max-width: 1023px) {@include mont22bold(); margin-top: 163px; margin-bottom: 0px;}
         }
 
         &__text {
@@ -513,6 +565,7 @@
             font-size: 18px;
             line-height: 29px;
             color: #3A4959;
+            @media (min-width: 768px) and (max-width: 1023px) {@include sans15();}
         }
     }
     }
@@ -526,13 +579,18 @@
     background: #056CDE;
     border-radius: 10px;
     height: 6px;
-    top: 3490px;
+    top: 145px;
+    @media (min-width: 0px) and (max-width: 1023px) {width: 80px; height: 3px; top: 140px;}
 }
 
 .main__content {
-
 &__advantages {
-    margin-top: -1257px;
+    padding-top: 65px;
+    @media (min-width: 0px) and (max-width: 767px) {padding-top: 38px;}
+}
+
+&__osvaldo {
+    @media (min-width: 768px) and (max-width: 1023px) {margin-top: -50px;}
 }
 
 &__bg {
