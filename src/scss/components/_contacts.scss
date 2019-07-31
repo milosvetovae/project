@@ -1,30 +1,32 @@
 .contacts {
-
+  padding-top: 50px;
 &__content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 20px;
   background:  #FFCE51;
   border-radius: 10px;
-  margin-top: -200px;
+  @media (min-width: 0px) and (max-width: 767px) {display: block;}
 
   &__sprite {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 4;
   }
 
   &__info {
     grid-column-start: 4;
     grid-column-end: 10;
+    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 5; grid-column-end: 12;}
   }
 }
 }
 
 .info {
-
 &__title {
   padding-top: 62px;
   padding-bottom: 18px;
+  @media (min-width: 0px) and (max-width: 1023px) {@include mont28bold(); padding-top: 30px;}
+  @media (min-width: 0px) and (max-width: 767px) {padding: 0px 20px;}
 }
 
 &__text {
@@ -34,6 +36,8 @@
   font-size: 18px;
   line-height: 29px;
   color: #3A4959;
+  @media (min-width: 768px) and (max-width: 1023px) {@include sans15();}
+  @media (min-width: 0px) and (max-width: 767px) {display: none;}
 }
 
 &__number {
@@ -46,6 +50,8 @@
   line-height: 29px;
   letter-spacing: 1px;
   color: #3A4959;
+  @media (min-width: 0px) and (max-width: 1023px) {@include mont18bold();}
+  @media (min-width: 0px) and (max-width: 767px) {padding: 20px 20px;}
 }
 
 &__button {
@@ -63,15 +69,18 @@
   width: 200px;
   padding: 15px 54px 15px 57px;
   margin-bottom: 70px;
+  @media (min-width: 768px) and (max-width: 1023px) {@include sans13bold(); color: #FFFFFF; padding: 10px 20px 10px 20px; margin-top: -10px; margin-bottom: 50px;}
+  @media (min-width: 0px) and (max-width: 1023px) {@include sans13bold(); color: #FFFFFF; padding: 12px 20px; margin-left: 20px;}
 }
 }
 
 .sprite { 
   @mixin sprite($item) {
     height: 105px;
-    width: 205px;
+    width: 220px;
     background-position: ($item * (-73)) + px 790px;
     background-image: url('./img/Sprite_b.svg');
+    @media (min-width: 0px) and (max-width: 1023px) {height: 61px; width: 117px; background-position: ($item * (-73)) + px 632px;}
   }
     
   &__mail {
@@ -79,5 +88,7 @@
     position: relative;
     top: -30px;
     left: 35px;
+    @media (min-width: 768px) and (max-width: 1023px) {left: 65px;}
+    @media (min-width: 0px) and (max-width: 767px) {top: -24px; left: 17px;}
   }
 }

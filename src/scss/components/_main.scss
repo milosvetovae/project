@@ -73,7 +73,7 @@
     border-radius: 10px;
     top: 112px;
     @media (min-width: 768px) and (max-width: 1023px) {width: 80px; height: 3px; top: 80px;}
-    @media (min-width: 0px) and (max-width: 767px) {width: 80px; height: 3px; top: 40px;}
+    @media (min-width: 0px) and (max-width: 767px) {width: 80px; height: 3px; top: -10px;}
 }
 
 .services {
@@ -83,7 +83,7 @@
     padding-top: 150px;
     position: relative;
     @media (min-width: 768px) and (max-width: 1023px) {padding-top: 105px;}
-    @media (min-width: 0px) and (max-width: 767px) {grid-template-columns: repeat(4, 1fr); grid-row-gap: 20px; padding-top: 208px;}
+    @media (min-width: 0px) and (max-width: 767px) {grid-template-columns: repeat(4, 1fr); grid-row-gap: 20px; padding-top: 158px;}
     
 &__title {
     grid-column-start: 2;
@@ -104,7 +104,7 @@
     z-index: 1;
     box-shadow: 0 0 10px rgba(145, 144, 144, 0.5);
     @media (min-width: 768px) and (max-width: 1023px) {margin-top: 9px; max-height: 400px;}
-    @media (min-width: 0px) and (max-width: 767px) {grid-column-start: 1; grid-column-end: 5; margin-top: -115px;}
+    @media (min-width: 0px) and (max-width: 767px) {max-width: 900px; grid-column-start: 1; grid-column-end: 5; margin-top: -115px;}
     }
 
 &__card-acupuncture {
@@ -118,7 +118,7 @@
     z-index: 1;
     box-shadow: 0 0 10px rgba(145, 144, 144, 0.5);
     @media (min-width: 768px) and (max-width: 1023px) {margin-top: 170px; max-height: 400px;}
-    @media (min-width: 0px) and (max-width: 767px) {grid-column-start: 1; grid-column-end: 5; margin-top: 0px;}
+    @media (min-width: 0px) and (max-width: 767px) {max-width: 900px; grid-column-start: 1; grid-column-end: 5; margin-top: 0px;}
     }
 
 &__card-massage {
@@ -132,7 +132,7 @@
     z-index: 1;
     box-shadow: 0 0 10px rgba(145, 144, 144, 0.5);
     @media (min-width: 768px) and (max-width: 1023px) {margin-top: -170px; max-height: 400px;}
-    @media (min-width: 0px) and (max-width: 767px) {grid-column-start: 1; grid-column-end: 5; margin-top: -180px;}
+    @media (min-width: 0px) and (max-width: 767px) {max-width: 900px; grid-column-start: 1; grid-column-end: 5; margin-top: -130px;}
     }
 }
 
@@ -287,7 +287,7 @@
     height: 6px;
     top: 50px;
     @media (min-width: 768px) and (max-width: 1023px) {width: 80px; height: 3px; top: 12px;}
-    @media (min-width: 0px) and (max-width: 767px) {width: 80px; height: 3px; top: -20px;}
+    @media (min-width: 0px) and (max-width: 767px) {width: 80px; height: 3px; top: 20px;}
 }
 
 .advantages {
@@ -298,7 +298,7 @@
     padding-top: 88px;
     padding-left: 100px;
     @media (min-width: 768px) and (max-width: 1023px) {padding-top: 35px; padding-left: 55px;}
-    @media (min-width: 0px) and (max-width: 767px) {padding-top: 0px; padding-left: 0px;}
+    @media (min-width: 0px) and (max-width: 767px) {padding-top: 40px; padding-left: 0px;}
 
     &__title {
         @media (min-width: 0px) and (max-width: 1023px) {@include mont22bold();}
@@ -319,7 +319,7 @@
     padding-top: 43px;
     height: auto;
     @media (min-width: 768px) and (max-width: 1023px) {grid-gap: 10px; padding-top: 63px;}
-    @media (min-width: 0px) and (max-width: 767px) {display: block; padding-top: 0px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: block; padding-top: 18px;}
     }
 
 &__cards-first__multi {
@@ -330,7 +330,7 @@
     border-radius: 10px;
     width: 100%;
     @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 3;}
-    @media (min-width: 0px) and (max-width: 767px) {background: none;}
+    @media (min-width: 0px) and (max-width: 767px) {background: none; box-shadow: none;}
     }
 
 &__cards-first__doctor {
@@ -341,7 +341,7 @@
     border-radius: 10px;
     width: 100%;
     @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 14;}
-    @media (min-width: 0px) and (max-width: 767px) {background: none;}
+    @media (min-width: 0px) and (max-width: 767px) {background: none; box-shadow: none;}
     }
 
 &__cards-second {
@@ -351,7 +351,7 @@
     margin-top: 48px;
     height: auto;
     @media (min-width: 768px) and (max-width: 1023px) {grid-gap: 10px; margin-top: 58px;}
-    @media (min-width: 0px) and (max-width: 767px) {display: block; margin-top: 0px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: block; margin-top: -35px;}
     }
 
 &__cards-second__over {
@@ -362,7 +362,7 @@
     border-radius: 10px;
     width: 100%;
     @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 3;}
-    @media (min-width: 0px) and (max-width: 767px) {background: none;}
+    @media (min-width: 0px) and (max-width: 767px) {background: none; box-shadow: none;}
     }
 
 &__cards-second__insurance {
@@ -373,7 +373,7 @@
     border-radius: 10px;
     width: 100%;
     @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 14;}
-    @media (min-width: 0px) and (max-width: 767px) {background: none;}
+    @media (min-width: 0px) and (max-width: 767px) {background: none; box-shadow: none; margin-top: -10px;}
     }
 }
 
@@ -386,8 +386,8 @@
     line-height: 21px;
     color: #3A4959;
     padding-left: 63px;
-    margin-top: -40px;
-    @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 27px 30px 0px 25px;}
+    padding-top: 30px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 36px 30px 0px 25px;}
     @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px; margin-top: -22px;}
 }
 
@@ -399,7 +399,7 @@
     line-height: 24px;
     color: #3A4959;
     padding: 9px 90px 10px 63px;
-    @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 5px 30px 26px 25px;}
+    @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 5px 30px 46px 25px;}
     @media (min-width: 0px) and (max-width: 767px) {@include sans14(); padding: 0px 0px 26px 70px;}
 }
 }
@@ -413,8 +413,8 @@
     line-height: 21px;
     color: #3A4959;
     padding-left: 64px;
-    margin-top: -38px;
-    @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 26px 30px 0px 25px;}
+    padding-top: 30px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 36px 30px 0px 25px;}
     @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px; margin-top: -45px;}
 }
     
@@ -426,7 +426,7 @@
     line-height: 24px;
     color: #3A4959;
     padding: 7px 30px 10px 64px;
-    @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 3px 10px 26px 25px;}
+    @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 3px 10px 30px 25px;}
     @media (min-width: 0px) and (max-width: 767px) {@include sans14(); padding: 0px 0px 26px 70px;}
 }
 }
@@ -442,39 +442,39 @@
       
     &__multi {
       @include sprite(0);
-      position: relative;
-      top: 40px;
-      left: -38px;
-      @media (min-width: 768px) and (max-width: 1023px) {top: -28px; left: 23px;}
-      @media (min-width: 0px) and (max-width: 767px) {top: 28px; left: 0px;}
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      @media (min-width: 768px) and (max-width: 1023px) {top: 31%; left: 12%;}
+      @media (min-width: 0px) and (max-width: 767px) {top:18%; left: 0px;}
     
     }
   
     &__doctor {
         @include sprite(1);
-        position: relative;
-        top: 41px;
-        left: -35px;
-        @media (min-width: 768px) and (max-width: 1023px) {top: -28px; left: 25px;}
-        @media (min-width: 0px) and (max-width: 767px) {top: 28px; left: 0px;}
+        position: absolute;
+        top: 50%;
+        left: 51%;
+        @media (min-width: 768px) and (max-width: 1023px) {top: 31%; left: 55%;}
+        @media (min-width: 0px) and (max-width: 767px) {top: 38%; left: 0px;}
       }
   
     &__over {
         @include sprite(2);
-        position: relative;
-        top: 41px;
-        left: -35px;
-        @media (min-width: 768px) and (max-width: 1023px) {top: -28px; left: 25px;}
-        @media (min-width: 0px) and (max-width: 767px) {top: 28px; left: 0px;}
+        position: absolute;
+        top: 82%;
+        left: 8%;
+        @media (min-width: 768px) and (max-width: 1023px) {top: 69%; left: 12%;}
+        @media (min-width: 0px) and (max-width: 767px) {top: 58%; left: 0px;}
     }
   
     &__insurance {
         @include sprite(3);
-        position: relative;
-        top: 41px;
-        left: -35px;
-        @media (min-width: 768px) and (max-width: 1023px) {top: -28px; left: 27px;}
-        @media (min-width: 0px) and (max-width: 767px) {top: 28px; left: 0px;}
+        position: absolute;
+        top: 82%;
+        left: 51%;;
+        @media (min-width: 768px) and (max-width: 1023px) {top: 69%; left: 55%;}
+        @media (min-width: 0px) and (max-width: 767px) {top: 82%; left: 0px;}
       }
     }
 
@@ -487,8 +487,8 @@
             line-height: 21px;
             color: #3A4959;
             padding-left: 63px;
-            margin-top: -37px;
-            @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 24px 30px 0px 25px;}
+            padding-top: 36px;
+            @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 36px 30px 0px 25px;}
             @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px;}
         }
         
@@ -514,8 +514,8 @@
         line-height: 21px;
         color: #3A4959;
         padding-left: 63px;
-        margin-top: -37px;
-        @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 20px 30px 0px 25px;}
+        padding-top: 37px;
+        @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 33px 30px 0px 25px;}
         @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px;}
     }
     
@@ -537,6 +537,7 @@
         display: grid;
         grid-template-columns: repeat(12,1fr);
         grid-gap: 20px;
+        @media (min-width: 0px) and (max-width: 767px) {display: block;}
 
     &__foto {
         grid-column-start: 1;
@@ -545,6 +546,7 @@
         &__img {
             position: relative;
             top: 120px;
+            @media (min-width: 0px) and (max-width: 767px) {top: 30px;}
         }
     }
 
@@ -553,9 +555,10 @@
         grid-column-end: 13;
 
         &__title {
-            margin-top: 180px;
+            padding-top: 180px;
             margin-bottom: 18px;
-            @media (min-width: 768px) and (max-width: 1023px) {@include mont22bold(); margin-top: 163px; margin-bottom: 0px;}
+            @media (min-width: 768px) and (max-width: 1023px) {@include mont22bold(); padding-top: 163px; margin-bottom: 0px;}
+            @media (min-width: 0px) and (max-width: 767px) {@include mont22bold(); padding-top: 72px;}
         }
 
         &__text {
@@ -565,7 +568,7 @@
             font-size: 18px;
             line-height: 29px;
             color: #3A4959;
-            @media (min-width: 768px) and (max-width: 1023px) {@include sans15();}
+            @media (min-width: 0px) and (max-width: 1023px) {@include sans15();}
         }
     }
     }
@@ -580,8 +583,15 @@
     border-radius: 10px;
     height: 6px;
     top: 145px;
-    @media (min-width: 0px) and (max-width: 1023px) {width: 80px; height: 3px; top: 140px;}
+    @media (min-width: 768px) and (max-width: 1023px) {width: 80px; height: 3px; top: 140px;}
+    @media (min-width: 0px) and (max-width: 767px) {width: 80px; height: 3px; top: 37%;}
 }
+
+// .osvaldo__foto::after {
+//     @media (min-width: 0px) and (max-width: 767px) {background: #056CDE;
+//         border-radius: 10px;width: 80px; height: 3px; bottom: 410px; content: " ";
+//         position: absolute;}
+// }
 
 .main__content {
 &__advantages {
