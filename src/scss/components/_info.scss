@@ -19,7 +19,7 @@
     grid-column-end: 13;
     @media (min-width: 0px) and (max-width: 767px) {position: absolute; width: 230px; height: 220px; top: -110px; right: -35px;}
   }
-}
+  }
 }
 
 .description__title::before {
@@ -131,13 +131,13 @@
   
   &__pinterest {
     @include sprite(0);
-  }
+    }
   &__instagram {
     @include sprite(1);
-  }
+    }
   &__twitter {
     @include sprite(2);
-  }
+    }
   &__facebook {
     @include sprite(3);
   }

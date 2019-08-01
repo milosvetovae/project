@@ -3,35 +3,35 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 85px;
+    @media (min-width: 0px) and (max-width: 767px) {display: block;}
 
 &__pages {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 305px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 18px;
+    @include sans13();
     color: #3A4959;
-}
+    @media (min-width: 768px) and (max-width: 1023px) {@include sans11(); width: 240px;}
+    @media (min-width: 0px) and (max-width: 767px) {@include sans11(); width: 240px;}
+    }
 
 &__contacts {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+    @media (min-width: 0px) and (max-width: 767px) {display: block;}
+    }
 }
 
 .contacts {
-
 &__sn { 
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 150px;
-    padding-right: 30px;
+    padding-right: 20px;
+    @media (min-width: 0px) and (max-width: 767px) {padding-top: 24px; padding-bottom: 35px;}
 
     @mixin sprite($item) {
         height: 30px;
@@ -53,86 +53,84 @@
         @include sprite(3);
     }
     }
+
 &__button {
     background: #FFCE51;
     width: 160px;
     padding: 12px 24px 9px 26px;
-    font-family: 'Open Sans';
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 18px;
+    @include sans13bold();
     text-align: center;
     color:black;
     border-radius: 10px;
-}
+    @media (min-width: 0px) and (max-width: 767px) {width: 100%; justify-content: center;}
+    }
 }
 
 .footer__second {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 20px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 23px;
+    @include sans14();
     color: #3A4959;
     padding-top: 35px;
     margin-bottom: 50px;
+    @media (min-width: 0px) and (max-width: 767px) {display: block;}
 
 &__adress {
     grid-column-start: 1;
     grid-column-end: 4;
-}
+    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 1; grid-column-end: 6;}
+    }
 
 &__time {
     grid-column-start: 4;
     grid-column-end: 8;
-}
+    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 1; grid-column-end: 6;}
+    @media (min-width: 0px) and (max-width: 767px) {padding-top: 40px;}
+    }
 
 &__info {
     grid-column-start: 9;
     grid-column-end: 13;
     text-align: right;
-}
+    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 8; grid-column-end: 13; margin-top: -70px;}
+    @media (min-width: 0px) and (max-width: 767px) {text-align: left;}
+    }
 }
 
 .adress {
 
 &__number {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 23px;
+    @include sans14bold();
     color: #3A4959;
-}
+    }
 
 &__street {
     line-height: 27px;
-}
+    }
 }
 
 .time {
 
 &__f {
-padding-top: 5px;
-}
+    padding-top: 5px;
+    }
 
 &__s {
     padding-top: 5px;;
-}
+    }
 }
 
 .info {
 
 &__copyright {
     padding-top: 10px;
-}
+    }
 
 &__web {
     padding-top: 10px;
-}
+    @media (min-width: 768px) and (max-width: 1023px) {padding-top: 5px;}
+    }
 
 &__rating {
     display: flex;
@@ -152,5 +150,5 @@ padding-top: 5px;
     &__text {
         padding-right: 6px;
     }
-}
+    }
 }

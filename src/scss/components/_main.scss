@@ -302,7 +302,7 @@
 
     &__title {
         @media (min-width: 0px) and (max-width: 1023px) {@include mont22bold();}
-    }
+        }
     &__text {
         padding-top: 16px;
         padding-right: 500px;
@@ -379,11 +379,7 @@
 
 .multi {
 &__title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
+    @include mont18bold();
     color: #3A4959;
     padding-left: 63px;
     padding-top: 30px;
@@ -392,11 +388,7 @@
 }
 
 &__text {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
+    @include sans16();
     color: #3A4959;
     padding: 9px 90px 10px 63px;
     @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 5px 30px 46px 25px;}
@@ -406,11 +398,7 @@
 
 .doctor {
 &__title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
+    @include mont18bold();
     color: #3A4959;
     padding-left: 64px;
     padding-top: 30px;
@@ -419,11 +407,7 @@
 }
     
 &__text {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
+    @include sans16();
     color: #3A4959;
     padding: 7px 30px 10px 64px;
     @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 3px 10px 30px 25px;}
@@ -432,12 +416,12 @@
 }
 
 .sprite { 
-    @mixin sprite($item) {
-      height: 70px;
-      width: 70px;
-      background-position: ($item * (-73)) + px 860px;
-      background-image: url('./img/Sprite_b.svg');
-      @media (min-width: 0px) and (max-width: 1023px) {height: 50px; width: 50px; background-position: ($item * (-53)) + px 682px;}
+@mixin sprite($item) {
+    height: 70px;
+    width: 70px;
+    background-position: ($item * (-73)) + px 860px;
+    background-image: url('./img/Sprite_b.svg');
+    @media (min-width: 0px) and (max-width: 1023px) {height: 50px; width: 50px; background-position: ($item * (-53)) + px 682px;}
     }
       
     &__multi {
@@ -447,7 +431,6 @@
       left: 8%;
       @media (min-width: 768px) and (max-width: 1023px) {top: 31%; left: 12%;}
       @media (min-width: 0px) and (max-width: 767px) {top:18%; left: 0px;}
-    
     }
   
     &__doctor {
@@ -457,7 +440,7 @@
         left: 51%;
         @media (min-width: 768px) and (max-width: 1023px) {top: 31%; left: 55%;}
         @media (min-width: 0px) and (max-width: 767px) {top: 38%; left: 0px;}
-      }
+    }
   
     &__over {
         @include sprite(2);
@@ -475,43 +458,31 @@
         left: 51%;;
         @media (min-width: 768px) and (max-width: 1023px) {top: 69%; left: 55%;}
         @media (min-width: 0px) and (max-width: 767px) {top: 82%; left: 0px;}
-      }
+    }
     }
 
 .over {
-        &__title {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 21px;
-            color: #3A4959;
-            padding-left: 63px;
-            padding-top: 36px;
-            @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 36px 30px 0px 25px;}
-            @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px;}
-        }
+    &__title {
+        @include mont18bold();
+        color: #3A4959;
+        padding-left: 63px;
+        padding-top: 36px;
+        @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 36px 30px 0px 25px;}
+        @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px;}
+    }
         
-        &__text {
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 24px;
-            color: #3A4959;
-            padding: 9px 50px 34px 63px;
-            @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 3px 10px 50px 25px;}
-            @media (min-width: 0px) and (max-width: 767px) {@include sans14(); padding: 0px 0px 26px 70px;}
-        }
+    &__text {
+        @include sans16();
+        color: #3A4959;
+        padding: 9px 50px 34px 63px;
+        @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 3px 10px 50px 25px;}
+        @media (min-width: 0px) and (max-width: 767px) {@include sans14(); padding: 0px 0px 26px 70px;}
+    }
 }
 
 .insurance {
     &__title {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 21px;
+        @include mont18bold();
         color: #3A4959;
         padding-left: 63px;
         padding-top: 37px;
@@ -520,11 +491,7 @@
     }
     
     &__text {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
+        @include sans16();
         color: #3A4959;
         padding: 9px 70px 34px 63px;
         @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 3px 10px 50px 25px;}
@@ -532,46 +499,42 @@
     }
     }
 
-    .osvaldo {
+.osvaldo {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 20px;
+    @media (min-width: 0px) and (max-width: 767px) {display: block;}
+
+&__foto {
+    grid-column-start: 1;
+    grid-column-end: 7;
+
+    &__img {
         position: relative;
-        display: grid;
-        grid-template-columns: repeat(12,1fr);
-        grid-gap: 20px;
-        @media (min-width: 0px) and (max-width: 767px) {display: block;}
-
-    &__foto {
-        grid-column-start: 1;
-        grid-column-end: 7;
-
-        &__img {
-            position: relative;
-            top: 120px;
-            @media (min-width: 0px) and (max-width: 767px) {top: 30px;}
+        top: 120px;
+        @media (min-width: 0px) and (max-width: 767px) {top: 30px; width: 100%;}
         }
     }
 
-    &__info {
-        grid-column-start: 7;
-        grid-column-end: 13;
+&__info {
+    grid-column-start: 7;
+    grid-column-end: 13;
 
-        &__title {
-            padding-top: 180px;
-            margin-bottom: 18px;
-            @media (min-width: 768px) and (max-width: 1023px) {@include mont22bold(); padding-top: 163px; margin-bottom: 0px;}
-            @media (min-width: 0px) and (max-width: 767px) {@include mont22bold(); padding-top: 72px;}
+    &__title {
+        padding-top: 180px;
+        margin-bottom: 18px;
+        @media (min-width: 768px) and (max-width: 1023px) {@include mont22bold(); padding-top: 163px; margin-bottom: 0px;}
+        @media (min-width: 0px) and (max-width: 767px) {@include mont22bold(); padding-top: 72px;}
         }
 
-        &__text {
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 29px;
-            color: #3A4959;
-            @media (min-width: 0px) and (max-width: 1023px) {@include sans15();}
+    &__text {
+        @include sans18();
+        color: #3A4959;
+         @media (min-width: 0px) and (max-width: 1023px) {@include sans15();}
         }
     }
-    }
+}
 
     
 .osvaldo__info__title::before {
@@ -584,24 +547,18 @@
     height: 6px;
     top: 145px;
     @media (min-width: 768px) and (max-width: 1023px) {width: 80px; height: 3px; top: 140px;}
-    @media (min-width: 0px) and (max-width: 767px) {width: 80px; height: 3px; top: 37%;}
+    @media (min-width: 0px) and (max-width: 767px) {display: none;}
 }
-
-// .osvaldo__foto::after {
-//     @media (min-width: 0px) and (max-width: 767px) {background: #056CDE;
-//         border-radius: 10px;width: 80px; height: 3px; bottom: 410px; content: " ";
-//         position: absolute;}
-// }
 
 .main__content {
 &__advantages {
     padding-top: 65px;
     @media (min-width: 0px) and (max-width: 767px) {padding-top: 38px;}
-}
+    }
 
 &__osvaldo {
     @media (min-width: 768px) and (max-width: 1023px) {margin-top: -50px;}
-}
+    }
 
 &__bg {
     z-index: 0;
@@ -611,14 +568,9 @@
     width: 590px;
     top: 720px;
     left: 0px;
-    @media (min-width: 768px) and (max-width: 1023px) {
-        top: 500px;
-        left: -80px;
+    @media (min-width: 768px) and (max-width: 1023px) {top: 500px; left: -80px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: none;}
     }
-    @media (min-width: 0px) and (max-width: 767px) {
-        display: none;
-    }
-}
 
 &__bg2 {
     background: url('./img/bg3.svg');
@@ -628,12 +580,7 @@
     position: absolute;
     top: 2100px;
     right: 0px;
-    @media (min-width: 768px) and (max-width: 1023px) {
-        top: 1460px;
-        max-width: 330px;
+    @media (min-width: 768px) and (max-width: 1023px) {top: 1460px; max-width: 330px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: none;}
     }
-    @media (min-width: 0px) and (max-width: 767px) {
-        display: none;
-    }
-}
 }

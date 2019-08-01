@@ -1,5 +1,7 @@
 .contacts {
   padding-top: 50px;
+  @media (min-width: 768px) and (max-width: 1023px) {padding-top: 70px;}
+  
 &__content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -18,7 +20,7 @@
     grid-column-end: 10;
     @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 5; grid-column-end: 12;}
   }
-}
+  }
 }
 
 .info {
@@ -27,39 +29,31 @@
   padding-bottom: 18px;
   @media (min-width: 0px) and (max-width: 1023px) {@include mont28bold(); padding-top: 30px;}
   @media (min-width: 0px) and (max-width: 767px) {padding: 0px 20px;}
-}
+  }
 
 &__text {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 29px;
+  @include sans18();
   color: #3A4959;
   @media (min-width: 768px) and (max-width: 1023px) {@include sans15();}
   @media (min-width: 0px) and (max-width: 767px) {display: none;}
-}
+  }
 
 &__number {
   padding-top: 22px;
   padding-bottom: 31px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 29px;
-  letter-spacing: 1px;
+  @include mont24();
   color: #3A4959;
-  @media (min-width: 0px) and (max-width: 1023px) {@include mont18bold();}
+  @media (min-width: 0px) and (max-width: 1023px) {@include mont18bold(); padding-bottom: 20px;}
   @media (min-width: 0px) and (max-width: 767px) {padding: 20px 20px;}
-}
+  }
 
 &__button {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 22px;
+  @media (min-width: 768px) and (max-width: 1023px) {padding: 0px 20px 40px 0px;}
+  @media (min-width: 0px) and (max-width: 767px) {padding: 0px 20px 20px 20px;}
+  }
+
+&__button__push {
+  @include sans16();
   display: flex;
   align-items: center;
   text-align: center;
@@ -69,26 +63,26 @@
   width: 200px;
   padding: 15px 54px 15px 57px;
   margin-bottom: 70px;
-  @media (min-width: 768px) and (max-width: 1023px) {@include sans13bold(); color: #FFFFFF; padding: 10px 20px 10px 20px; margin-top: -10px; margin-bottom: 50px;}
-  @media (min-width: 0px) and (max-width: 1023px) {@include sans13bold(); color: #FFFFFF; padding: 12px 20px; margin-left: 20px;}
-}
+  @media (min-width: 768px) and (max-width: 1023px) {@include sans13bold(); color: #FFFFFF;}
+  @media (min-width: 0px) and (max-width: 1023px) {@include sans13bold(); color: #FFFFFF; padding: 10px 20px; width: auto; margin: 0px; justify-content: center;}
+  }
 }
 
 .sprite { 
-  @mixin sprite($item) {
-    height: 105px;
-    width: 220px;
-    background-position: ($item * (-73)) + px 790px;
-    background-image: url('./img/Sprite_b.svg');
-    @media (min-width: 0px) and (max-width: 1023px) {height: 61px; width: 117px; background-position: ($item * (-73)) + px 632px;}
+@mixin sprite($item) {
+  height: 105px;
+  width: 220px;
+  background-position: ($item * (-73)) + px 790px;
+  background-image: url('./img/Sprite_b.svg');
+  @media (min-width: 0px) and (max-width: 1023px) {height: 61px; width: 117px; background-position: ($item * (-73)) + px 632px;}
   }
     
-  &__mail {
-    @include sprite(0);
-    position: relative;
-    top: -30px;
-    left: 35px;
-    @media (min-width: 768px) and (max-width: 1023px) {left: 65px;}
-    @media (min-width: 0px) and (max-width: 767px) {top: -24px; left: 17px;}
+&__mail {
+  @include sprite(0);
+  position: relative;
+  top: -30px;
+  left: 35px;
+  @media (min-width: 768px) and (max-width: 1023px) {left: 65px;}
+  @media (min-width: 0px) and (max-width: 767px) {top: -24px; left: 17px;}
   }
 }
