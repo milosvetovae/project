@@ -1,0 +1,64 @@
+.button {
+
+&__appointment{
+    background-color: #FFCE51;
+    border-radius: 10px;
+    padding: 12px 21px 11px 22px;
+    @include sans13bold();
+    text-align: center;
+    white-space: nowrap;
+    @media (min-width: 0px) and (max-width: 1023px) {display: none;}
+    }
+
+&__push {
+    position: relative;
+    padding: 14px 76px;
+    margin-bottom: 40px;
+    @include sans16bold();
+    text-align: center;
+    color: white;
+    background: #056CDE;
+    border-radius: 10px;
+    z-index: 1;
+    @media (min-width: 768px) and (max-width: 1023px) {font-size: 13px; line-height: 18px; padding: 14px 56px 10px 56px;}
+    @media (min-width: 0px) and (max-width: 767px) {font-size: 13px; line-height: 18px; padding: 14px 0px 9px 0px; display: block;}
+    }
+
+&__pain {
+    background: #FFCE51;
+    width: 160px;
+    padding: 10px 62px 13px 62px;
+    @include sans13bold();
+    text-align: center;
+    color:black;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    }
+
+&__appointment2 {
+    @include sans16();
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    background: #056CDE;
+    border-radius: 10px;
+    width: 200px;
+    padding: 15px 54px 15px 57px;
+    margin-bottom: 70px;
+    @media (min-width: 768px) and (max-width: 1023px) {@include sans13bold(); color: #FFFFFF; max-width: 200px;}
+    @media (min-width: 0px) and (max-width: 1023px) {@include sans13bold(); color: #FFFFFF; padding: 10px 20px; width: auto; margin: 0px; justify-content: center;}
+    }
+
+&__contact {
+    background: #FFCE51;
+    width: 160px;
+    padding: 12px 64px 9px 66px;
+    @include sans13bold();
+    text-align: center;
+    color:black;
+    border-radius: 10px;
+    @media (min-width: 0px) and (max-width: 767px) {width: 100%; justify-content: center;}
+    }
+}

@@ -20,6 +20,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-right: 10px;
+    @media (min-width: 768px) and (max-width: 1023px) {padding-right: 0px;}
     @media (min-width: 0px) and (max-width: 767px) {display: block;}
     }
 }
@@ -53,17 +55,6 @@
         @include sprite(3);
     }
     }
-
-&__button {
-    background: #FFCE51;
-    width: 160px;
-    padding: 12px 24px 9px 26px;
-    @include sans13bold();
-    text-align: center;
-    color:black;
-    border-radius: 10px;
-    @media (min-width: 0px) and (max-width: 767px) {width: 100%; justify-content: center;}
-    }
 }
 
 .footer__second {
@@ -74,27 +65,28 @@
     color: #3A4959;
     padding-top: 35px;
     margin-bottom: 50px;
-    @media (min-width: 0px) and (max-width: 767px) {display: block;}
+    @media (min-width: 0px) and (max-width: 767px) {grid-template-columns: repeat(4, 1fr);}
 
 &__adress {
     grid-column-start: 1;
     grid-column-end: 4;
-    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 1; grid-column-end: 6;}
+    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 1; grid-column-end: 7;}
+    @media (min-width: 0px) and (max-width: 767px) {grid-column-start: 1; grid-column-end: 5;}
     }
 
 &__time {
     grid-column-start: 4;
     grid-column-end: 8;
     @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 1; grid-column-end: 6;}
-    @media (min-width: 0px) and (max-width: 767px) {padding-top: 40px;}
+    @media (min-width: 0px) and (max-width: 767px) {padding-top: 0px; grid-column-start: 1; grid-column-end: 5;}
     }
 
 &__info {
     grid-column-start: 9;
     grid-column-end: 13;
     text-align: right;
-    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 8; grid-column-end: 13; margin-top: -70px;}
-    @media (min-width: 0px) and (max-width: 767px) {text-align: left;}
+    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 8; grid-column-end: 13; margin-top: -60px;}
+    @media (min-width: 0px) and (max-width: 767px) {grid-column-start: 1; grid-column-end: 5; text-align: left;}
     }
 }
 
@@ -117,7 +109,7 @@
     }
 
 &__s {
-    padding-top: 5px;;
+    padding-top: 5px;
     }
 }
 
@@ -135,6 +127,7 @@
 &__rating {
     display: flex;
     justify-content: flex-end;
+    @media (min-width: 0px) and (max-width: 767px) {justify-content: flex-start;}
     @mixin sprite($item) {
     height: 22px;
     width: 22px;

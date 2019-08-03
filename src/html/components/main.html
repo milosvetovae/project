@@ -16,7 +16,10 @@
                     you. Healthy Spine Family Chiropractic was created for the necessity of custom made chiropractic
                     treatment for all ages. We understand that not all bodies are the same and so your chiropractic
                     treatment will be tailored to you.</div>
-                    <a href='' class="pain-treatment__info__button">LEARN MORE</a>
+                    @@include("./../components/button.html", {
+                        "class":"pain",
+                        "text":"LEARN MORE"
+                    })
                 </div>
                 </div>
             </div>
@@ -85,29 +88,27 @@
                             Chiropractic was created for the necessity of custom made 
                             chiropractic treatment for all ages.</div>
                     </div>
-                    <div class="advantages__cards-first">
-                        <div class="advantages__cards-first__multi">
-                            <svg class="sprite__multi"></svg>
-                            <h3 class="multi__title">Multi Disciplinary Practice</h3>
-                            <div class="multi__text">We offer chiropractic, massage and acupuncture.</div>
-                        </div>  
-                        <div class="advantages__cards-first__doctor">
-                            <svg class="sprite__doctor"></svg>
-                            <h3 class="doctor__title">The Doctor Speaks Spanish</h3>
-                            <div class="doctor__text">We strive to provide complete care for our patients. We speak English and Spanish.</div>
-                        </div>
-                    </div>
-                    <div class="advantages__cards-second">
-                        <div class="advantages__cards-second__over">
-                            <div class="sprite__over"></div>
-                            <h3 class="over__title">Over 10 Years of Experience</h3>
-                            <div class="over__text">The Doctor has 10+ years of experience in the chiropractic.</div>
-                        </div>
-                        <div class="advantages__cards-second__insurance">
-                            <div class="sprite__insurance"></div>
-                            <h3 class="insurance__title">Insurance</h3>
-                            <div class="insurance__text">We accept most insurance and file the claims for you.</div>
-                        </div>
+                    <div class="advantages__cards">
+                        @@include("./../components/advantages-card.html", {
+                            "name":"multi",
+                            "title":"Multi Disciplinary Practice",
+                            "text":"We offer chiropractic, massage and acupuncture."
+                        })
+                        @@include("./../components/advantages-card.html", {
+                            "name":"doctor",
+                            "title":"The Doctor Speaks Spanish",
+                            "text":"We strive to provide complete care for our patients. We speak English and Spanish."
+                        })
+                        @@include("./../components/advantages-card.html", {
+                            "name":"over",
+                            "title":"Over 10 Years of Experience",
+                            "text":"The Doctor has 10+ years of experience in the chiropractic."
+                        })
+                        @@include("./../components/advantages-card.html", {
+                            "name":"insurance",
+                            "title":"Insurance",
+                            "text":"We accept most insurance and file the claims for you."
+                        })
                     </div>
                 </div>
             </div>

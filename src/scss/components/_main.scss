@@ -3,7 +3,7 @@
     display: grid;
     grid-gap: 20px;
     padding-top: 130px;
-    @media (min-width: 768px) and (max-width: 1023px) {margin-top: -205px;}
+    @media (min-width: 768px) and (max-width: 1023px) {margin-top: -32px;}
     @media (min-width: 0px) and (max-width: 767px) {display: none;}
 
 &__foto {
@@ -37,18 +37,6 @@
         position: relative;
         z-index: 1;
         @media (min-width: 768px) and (max-width: 1023px) {@include sans15(); padding-bottom: 27px;}
-        }
-
-    &__button {
-        background: #FFCE51;
-        width: 160px;
-        padding: 10px 62px 13px 62px;
-        @include sans13bold();
-        text-align: center;
-        color:black;
-        border-radius: 10px;
-        position: relative;
-        z-index: 1;
         }
     }
 }
@@ -142,7 +130,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    @media (min-width: 0px) and (max-width: 767px) {max-height: 95px;}
+    @media (min-width: 470px) and (max-width: 767px) {max-height: auto;}
+    @media (min-width: 0px) and (max-width: 469px) {max-height: 95px;}
     }
 
 &__title {
@@ -174,7 +163,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    @media (min-width: 0px) and (max-width: 767px) {max-height: 95px;}
+    @media (min-width: 470px) and (max-width: 767px) {max-height: auto;}
+    @media (min-width: 0px) and (max-width: 469px) {max-height: 95px;}
     }
 
 &__title {
@@ -205,7 +195,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    @media (min-width: 0px) and (max-width: 767px) {max-height: 95px;}
+    @media (min-width: 470px) and (max-width: 767px) {max-height: auto;}
+    @media (min-width: 0px) and (max-width: 469px) {max-height: 95px;}
     }
 
 &__title {
@@ -312,192 +303,16 @@
         }
     }
 
-&__cards-first {
+&__cards {
     grid-template-columns: repeat(26,1fr);
     display: grid;
     grid-gap: 0px;
+    height: auto;
     padding-top: 43px;
-    height: auto;
-    @media (min-width: 768px) and (max-width: 1023px) {grid-gap: 10px; padding-top: 63px;}
-    @media (min-width: 0px) and (max-width: 767px) {display: block; padding-top: 18px;}
-    }
-
-&__cards-first__multi {
-    grid-column-start: 4;
-    grid-column-end: 13;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
-    border-radius: 10px;
-    width: 100%;
-    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 3;}
-    @media (min-width: 0px) and (max-width: 767px) {background: none; box-shadow: none;}
-    }
-
-&__cards-first__doctor {
-    grid-column-start: 15;
-    grid-column-end: 24;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
-    border-radius: 10px;
-    width: 100%;
-    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 14;}
-    @media (min-width: 0px) and (max-width: 767px) {background: none; box-shadow: none;}
-    }
-
-&__cards-second {
-    grid-template-columns: repeat(26,1fr);
-    display: grid;
-    grid-gap: 0px;
-    margin-top: 48px;
-    height: auto;
-    @media (min-width: 768px) and (max-width: 1023px) {grid-gap: 10px; margin-top: 58px;}
-    @media (min-width: 0px) and (max-width: 767px) {display: block; margin-top: -35px;}
-    }
-
-&__cards-second__over {
-    grid-column-start: 4;
-    grid-column-end: 13;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
-    border-radius: 10px;
-    width: 100%;
-    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 3;}
-    @media (min-width: 0px) and (max-width: 767px) {background: none; box-shadow: none;}
-    }
-
-&__cards-second__insurance {
-    grid-column-start: 15;
-    grid-column-end: 24;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
-    border-radius: 10px;
-    width: 100%;
-    @media (min-width: 768px) and (max-width: 1023px) {grid-column-start: 14;}
-    @media (min-width: 0px) and (max-width: 767px) {background: none; box-shadow: none; margin-top: -10px;}
+    @media (min-width: 768px) and (max-width: 1023px) {padding-top: 63px;  grid-gap: 10px;}
+    @media (min-width: 0px) and (max-width: 767px) {display: block; padding-top: 15px;}   
     }
 }
-
-.multi {
-&__title {
-    @include mont18bold();
-    color: #3A4959;
-    padding-left: 63px;
-    padding-top: 30px;
-    @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 36px 30px 0px 25px;}
-    @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px; margin-top: -22px;}
-}
-
-&__text {
-    @include sans16();
-    color: #3A4959;
-    padding: 9px 90px 10px 63px;
-    @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 5px 30px 46px 25px;}
-    @media (min-width: 0px) and (max-width: 767px) {@include sans14(); padding: 0px 0px 26px 70px;}
-}
-}
-
-.doctor {
-&__title {
-    @include mont18bold();
-    color: #3A4959;
-    padding-left: 64px;
-    padding-top: 30px;
-    @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 36px 30px 0px 25px;}
-    @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px; margin-top: -45px;}
-}
-    
-&__text {
-    @include sans16();
-    color: #3A4959;
-    padding: 7px 30px 10px 64px;
-    @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 3px 10px 30px 25px;}
-    @media (min-width: 0px) and (max-width: 767px) {@include sans14(); padding: 0px 0px 26px 70px;}
-}
-}
-
-.sprite { 
-@mixin sprite($item) {
-    height: 70px;
-    width: 70px;
-    background-position: ($item * (-73)) + px 860px;
-    background-image: url('./img/Sprite_b.svg');
-    @media (min-width: 0px) and (max-width: 1023px) {height: 50px; width: 50px; background-position: ($item * (-53)) + px 682px;}
-    }
-      
-    &__multi {
-      @include sprite(0);
-      position: absolute;
-      top: 50%;
-      left: 8%;
-      @media (min-width: 768px) and (max-width: 1023px) {top: 31%; left: 12%;}
-      @media (min-width: 0px) and (max-width: 767px) {top:18%; left: 0px;}
-    }
-  
-    &__doctor {
-        @include sprite(1);
-        position: absolute;
-        top: 50%;
-        left: 51%;
-        @media (min-width: 768px) and (max-width: 1023px) {top: 31%; left: 55%;}
-        @media (min-width: 0px) and (max-width: 767px) {top: 38%; left: 0px;}
-    }
-  
-    &__over {
-        @include sprite(2);
-        position: absolute;
-        top: 82%;
-        left: 8%;
-        @media (min-width: 768px) and (max-width: 1023px) {top: 69%; left: 12%;}
-        @media (min-width: 0px) and (max-width: 767px) {top: 58%; left: 0px;}
-    }
-  
-    &__insurance {
-        @include sprite(3);
-        position: absolute;
-        top: 82%;
-        left: 51%;;
-        @media (min-width: 768px) and (max-width: 1023px) {top: 69%; left: 55%;}
-        @media (min-width: 0px) and (max-width: 767px) {top: 82%; left: 0px;}
-    }
-    }
-
-.over {
-    &__title {
-        @include mont18bold();
-        color: #3A4959;
-        padding-left: 63px;
-        padding-top: 36px;
-        @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 36px 30px 0px 25px;}
-        @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px;}
-    }
-        
-    &__text {
-        @include sans16();
-        color: #3A4959;
-        padding: 9px 50px 34px 63px;
-        @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 3px 10px 50px 25px;}
-        @media (min-width: 0px) and (max-width: 767px) {@include sans14(); padding: 0px 0px 26px 70px;}
-    }
-}
-
-.insurance {
-    &__title {
-        @include mont18bold();
-        color: #3A4959;
-        padding-left: 63px;
-        padding-top: 37px;
-        @media (min-width: 768px) and (max-width: 1023px) {@include mont14bold(); padding: 33px 30px 0px 25px;}
-        @media (min-width: 0px) and (max-width: 767px) {@include mont14bold(); padding-left: 70px;}
-    }
-    
-    &__text {
-        @include sans16();
-        color: #3A4959;
-        padding: 9px 70px 34px 63px;
-        @media (min-width: 768px) and (max-width: 1023px) {@include sans14(); padding: 3px 10px 50px 25px;}
-        @media (min-width: 0px) and (max-width: 767px) {@include sans14(); padding: 0px 0px 26px 70px;}
-    }
-    }
 
 .osvaldo {
     position: relative;

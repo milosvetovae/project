@@ -4,9 +4,10 @@
             <div class="info__content__description">
                 <h1 class="description__title">Healthy<br> Spine Family Chiropractic</h1>
                 <div class="description__text">Healthy Spine Family Chiropractic was created for the necessity of custom made chiropractic treatment for all ages. We understand that not all bodies are the same.</div>
-                <div class="description__button">
-                    <a class="description__button__push">GET IN TOUCH NOW</a>
-                </div>
+                @@include("./../components/button.html", {
+                    "class":"push",
+                    "text":"GET IN TOUCH NOW"
+                })
                 <div class="description__contact">
                     <a href="" class="contact__pinterest"></a>
                     <a href="" class="contact__instagram"></a>
@@ -15,9 +16,7 @@
                 </div>
             </div>
             <div class="info__content__img">
-                <svg class='img__bg' width="560" height="504" viewBox="0 0 560 504" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M139.384 43.6259C90.0096 83.1439 61.2811 128.836 43.1039 164.649C24.9266 200.462 6.0732 257.268 1.13549 309.135C-5.18549 375.532 15.9476 412.868 38.1661 441.272C60.3846 469.675 102.155 496.08 144.321 501.783C195.841 508.75 259.357 498.965 347.991 477.084C443.037 453.621 487.474 423.983 518.333 395.579C549.192 367.176 564.004 323.954 559.067 283.201C554.129 242.449 531.911 193.052 503.521 149.83C475.13 106.607 429.459 65.8548 397.365 46.096C365.272 26.3373 325.772 2.87345 276.398 0.403604C227.023 -2.06624 186.228 6.13272 139.384 43.6259Z" fill="#D5E9FF"/>
-                </svg>
+                <img src="./img/Vector.png" class="img__bg">
                 <img src='./img/image.png' class="img__spine">
                 <img src="./img/Ellipse.png" class='img__ellipse'>
             </div>

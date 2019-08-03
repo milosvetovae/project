@@ -37,13 +37,6 @@
 }
 
 .contact-us {
-  &__appointment {
-  background-color: #FFCE51;
-  border-radius: 10px;
-  padding: 12px 21px 11px 22px;
-  @include sans13bold();
-  text-align: center;
-  }
 
   &__number {
   @include sans16bold();

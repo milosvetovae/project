@@ -2,10 +2,11 @@
 &__content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-row-gap: 1px 1fr 1px;
   grid-gap: 20px;
   margin: 0;
   padding-top: 42px;
-  @media (min-width: 0px) and (max-width: 767px) {grid-template-columns: repeat(4, 1fr);}
+  @media (min-width: 0px) and (max-width: 767px) {grid-template-columns: repeat(4, 1fr); padding-bottom: 20px;}
 
   &__description {
     grid-column-start: 2;
@@ -15,6 +16,8 @@
 
   &__img {
     position: relative;
+    display: flex;
+    flex-direction: column;
     grid-column-start: 7;
     grid-column-end: 13;
     @media (min-width: 0px) and (max-width: 767px) {position: absolute; width: 230px; height: 220px; top: -110px; right: -35px;}
@@ -45,29 +48,11 @@
 
 &__text {
   @include sans18();
-  padding: 28px 0px 28px 0px;
-  @media (min-width: 768px) and (max-width: 1023px) {font-size: 15px; line-height: 25px; padding: 19px 0px 19px 0px;}
-  @media (min-width: 0px) and (max-width: 767px) {font-size: 15px; line-height: 25px; padding: 14px 0px 19px 0px;}
-  }
-
-&__button {
-  padding: 20px 0px 121px 0px;
+  padding: 28px 0px 48px 0px;
   position: relative;
   z-index: 1;
-  @media (min-width: 768px) and (max-width: 1023px) {padding: 15px 0px 19px 0px;}
-  @media (min-width:0px) and (max-width: 767px) {width: 100%; padding: 0px 0px 19px 0px;}
-  }
-
-&__button__push {
-  padding: 14px 76px;
-  margin-bottom: 40px;
-  @include sans16bold();
-  text-align: center;
-  color: white;
-  background: #056CDE;
-  border-radius: 10px;
-  @media (min-width: 768px) and (max-width: 1023px) {font-size: 13px; line-height: 18px; padding: 14px 56px 10px 56px;}
-  @media (min-width: 0px) and (max-width: 767px) {font-size: 13px; line-height: 18px; padding: 14px 0px 9px 0px; display: block;}
+  @media (min-width: 768px) and (max-width: 1023px) {font-size: 15px; line-height: 25px; padding: 19px 0px 35px 0px;}
+  @media (min-width: 0px) and (max-width: 767px) {font-size: 15px; line-height: 25px; padding: 14px 0px 19px 0px;}
   }
 
 &__contact {
@@ -76,6 +61,7 @@
   width: 150px;
   position: relative;
   z-index: 1;
+  padding-top: 120px;
   @media (min-width: 0px) and (max-width: 1023px) {display: none;}
   }
 }
@@ -84,38 +70,28 @@
 
 .img {
 &__bg {
-  @media (min-width: 768px) and (max-width: 1023px) {position: relative; top: -20%; max-width: 330px;}
+  position: relative;
+  z-index: 0;
+  @media (min-width: 768px) and (max-width: 1023px) {max-width: 330px;}
+  @media (min-width: 0px) and (max-width: 767px) {max-width: 240px; position: absolute; top: 60%;}
   }
 
 &__spine {
   position: absolute;
-  top: -5px;
-  width: 50%;
-  left: 43%;
-  max-height: 560px;
-  transform: translateX(-50%);
-  @media (min-width: 768px) and (max-width: 1023px) {position: absolute; top: -15px; max-height: 320px; transform: translateX(-50%);}
-  @media (min-width: 0px) and (max-width: 767px) {position: absolute; top: 80%; max-width: 80px; left: 45%; max-height: 140px; transform: translateX(-50%);}
+  z-index: 1;
+  width: 52%;
+  padding-left: 90px;
+  transform: translateY(0%);
+  @media (min-width: 768px) and (max-width: 1023px) {position: absolute; top: -15px; max-height: 320px; max-width: 180px; transform: translateX(-15%);}
+  @media (min-width: 0px) and (max-width: 767px) {position: absolute; top: 80%; max-width: 80px; left: 25%; max-height: 140px; transform: translateX(-50%);}
   }
 
 &__ellipse {
-  position: absolute;
-  top: 600px;
-  left: 53%;
-  transform: translateX(-50%);
-  @media (min-width: 768px) and (max-width: 1023px) {position: absolute; top: 65%; left: 40%; max-width: 250px;}
+  position: relative;
+  top: 80px;
+  @media (min-width: 768px) and (max-width: 1023px) {position: relative; top: 60px; left: 10%; max-width: 250px;}
   @media (min-width: 0px) and (max-width: 767px) {display: none;}
   }
-}
-
-.img__spine::after {
-  content: " ";
-  position: absolute;
-  max-width: 110px;
-  max-height: 100%;
-  background: #056CDE;
-  border-radius: 10px;
-  height: 6px;
 }
 
 .contact {
