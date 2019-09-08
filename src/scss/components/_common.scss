@@ -57,6 +57,7 @@ img {
 
 svg {
   max-width: 100%;
+  min-width: 150px;
 }
 
 @mixin sans13() {

@@ -65,9 +65,9 @@
 &__mail {
   @include sprite(0);
   position: relative;
-  top: -30px;
+  top: -50px;
   left: 35px;
-  @media (min-width: 768px) and (max-width: 1023px) {left: 65px;}
+  @media (min-width: 768px) and (max-width: 1023px) {left: 65px; top: -30px;}
   @media (min-width: 0px) and (max-width: 767px) {top: -24px; left: 17px;}
   }
 }
